@@ -12,14 +12,14 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:3500",
+    origin: "http://localhost:3000",
     credentials: true,
   })
 );
 
 app.use(express.json());
 app.use("/api/vehicles", VehicleRoutes);
-app.use("/api/booking", BookingRoutes);
+app.use("/api/bookings", BookingRoutes);
 app.get("/", (req, res) => {
   res.json({ message: "Server is running!" });
 });
